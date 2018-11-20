@@ -1,10 +1,11 @@
+// require('dotenv').config();
 import Vue from "vue";
 import App from "./App";
 import * as VueGoogleMaps from "vue2-google-maps";
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: "AIzaSyAnf_kOUcsgtxPjt2JCgQhJ-fIm70mfqBU",
+    key: "process.env.GOOGLE_MAP_KEY",
     libraries: "places" // necessary for places input
   }
 });
