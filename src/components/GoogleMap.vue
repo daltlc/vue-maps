@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h2>Search and add a pin</h2>
+      <h2 style="color:red">Search and add a pin</h2>
       <label>
         <gmap-autocomplete
           @place_changed="setPlace">
@@ -63,7 +63,7 @@ export default {
       }
     },
     saveMarkers() {
-        
+
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
