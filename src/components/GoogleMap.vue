@@ -62,6 +62,9 @@ export default {
         this.currentPlace = null;
       }
     },
+    saveMarkers() {
+        
+    },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
         this.center = {
