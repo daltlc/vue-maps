@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import VueLocalStorage from 'vue-localstorage';
+
 export default {
   name: "GoogleMap",
   data() {
@@ -43,8 +45,10 @@ export default {
 
   mounted() {
     this.geolocate();
+    if(localStorage.markers){
+      this.markers = localStorage.markers;
+    }
   },
-
   methods: {
     // receives a place object via the autocomplete component
     setPlace(place) {
@@ -59,8 +63,12 @@ export default {
         this.markers.push({ position: marker });
         this.places.push(this.currentPlace);
         this.center = marker;
+        
+        // let isValue = this.$localStorage.get('marker');
+        // this.$localStorage.set('')
+
+        Vue.localStorage.set('somenumber', 123);
         this.currentPlace = null;
-        console.log(markers);
       }
     },
     geolocate: function() {
