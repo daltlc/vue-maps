@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 import Vue from "vue";
 import App from "./App";
 import * as VueGoogleMaps from "vue2-google-maps";

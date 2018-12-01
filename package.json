@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^6.1.0",
     "dotenv-webpack": "^1.5.7",
+    "fs": "0.0.1-security",
     "vue": "^2.5.11",
     "vue2-google-maps": "^0.10.3"
   },
