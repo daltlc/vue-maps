@@ -7,6 +7,7 @@
           @place_changed="setPlace">
         </gmap-autocomplete>
         <button @click="addMarker">Add</button>
+        <button @click="saveMarker">Save</button>
       </label>
       <br/>
 
@@ -45,9 +46,9 @@ export default {
 
   mounted() {
     this.geolocate();
-    if(localStorage.markers){
-      this.markers = localStorage.markers;
-    }
+    // if(localStorage.markers){
+    //   this.markers = localStorage.markers;
+    // }
   },
   methods: {
     // receives a place object via the autocomplete component
@@ -61,15 +62,15 @@ export default {
           lng: this.currentPlace.geometry.location.lng()
         };
         this.markers.push({ position: marker });
+        console.log(this.currentPlace)
         this.places.push(this.currentPlace);
         this.center = marker;
-        
-        // let isValue = this.$localStorage.get('marker');
-        // this.$localStorage.set('')
-
-        Vue.localStorage.set('somenumber', 123);
         this.currentPlace = null;
       }
+    },
+    saveMarker() {
+      
+
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
