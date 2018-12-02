@@ -17,7 +17,7 @@
         </gmap-autocomplete>
         <button @click="addMarker">Add</button>
         <button @click="deleteMarkers">Delete all</button>
-        <button @click="copyMarkers">Show marker position JSON data</button>
+        <button @click="copyMarkers">Show marker JSON data</button>
       </label>
       <br/>
 
@@ -84,7 +84,7 @@ export default {
 
     },
     copyMarkers(){
-     let copy = JSON.parse(localStorage.getItem('markers'));
+     let copy = JSON.stringify(localStorage.getItem('markers'));
      alert(copy);
      console.log(copy)
     },
@@ -100,8 +100,7 @@ export default {
   watch: {
     markers: {
       handler() {
-        localStorage.setItem('markers', JSON.stringify(JSON.stringify(this.markers)));
-        console.log(this.markers)
+        localStorage.setItem('markers', JSON.stringify(this.markers));
       },
       deep:true,
     }
