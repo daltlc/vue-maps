@@ -7,7 +7,7 @@
           @place_changed="setPlace">
         </gmap-autocomplete>
         <button @click="addMarker">Add</button>
-        <button @click="saveMarker">Save</button>
+        <button @click="deleteMarkers">Delete all</button>
       </label>
       <br/>
 
@@ -68,8 +68,10 @@ export default {
         // localStorage.setItem('markers', JSON.stringify(this.marker))
       }
     },
-    saveMarker() {
-      
+    deleteMarkers() {
+      localStorage.removeItem('markers');
+      this.markers = [];
+      console.log('deleted')
 
     },
     geolocate: function() {
