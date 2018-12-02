@@ -8,8 +8,7 @@
       color:black;
       font-family: 'Sedgwick Ave', cursive;
       text-align:center;
-      margin-bottom:20+px;
-      border-bottom: 1px solid black;
+      margin-bottom:20+px;      
       ">
       Search and add a pin</h2>
       <label>
@@ -27,7 +26,7 @@
     <gmap-map
       :center="center"
       :zoom="12"
-      style="width:100%;  height: 400px;"
+      style="width:100%;  height: 400px;  border:2px solid black;"
     >
       <gmap-marker
         :key="index"
