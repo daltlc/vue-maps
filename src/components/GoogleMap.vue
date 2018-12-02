@@ -17,6 +17,7 @@
         </gmap-autocomplete>
         <button @click="addMarker">Add</button>
         <button @click="deleteMarkers">Delete all</button>
+        <button @click="copyMarkers">Show marker JSON data</button>
       </label>
       <br/>
 
@@ -74,7 +75,6 @@ export default {
         this.places.push(this.currentPlace);
         this.center = marker;
         this.currentPlace = null;
-        // localStorage.setItem('markers', JSON.stringify(this.marker))
       }
     },
     deleteMarkers() {
@@ -82,6 +82,10 @@ export default {
       this.markers = [];
       console.log('deleted')
 
+    },
+    copyMarkers(){
+     let copy = JSON.parse(localStorage.getItem(marker.position));
+     alert(copy);
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
@@ -96,7 +100,7 @@ export default {
     markers: {
       handler() {
         localStorage.setItem('markers', JSON.stringify(this.markers));
-        console.log('set')
+        console.log(this.markers)
       },
       deep:true,
     }
