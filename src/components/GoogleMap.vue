@@ -46,9 +46,8 @@ export default {
 
   mounted() {
     this.geolocate();
-    // if(localStorage.markers){
-    //   this.markers = localStorage.markers;
-    // }
+    console.log('App mounted!');
+    if (localStorage.getItem('markers')) this.markers = JSON.parse(localStorage.getItem('markers'));
   },
   methods: {
     // receives a place object via the autocomplete component
@@ -62,10 +61,11 @@ export default {
           lng: this.currentPlace.geometry.location.lng()
         };
         this.markers.push({ position: marker });
-        console.log(this.currentPlace)
+        console.log(this.markers)
         this.places.push(this.currentPlace);
         this.center = marker;
         this.currentPlace = null;
+        // localStorage.setItem('markers', JSON.stringify(this.marker))
       }
     },
     saveMarker() {
@@ -79,6 +79,15 @@ export default {
           lng: position.coords.longitude
         };
       });
+    },
+  },
+  watch: {
+    markers: {
+      handler() {
+        localStorage.setItem('markers', JSON.stringify(this.markers));
+        console.log('set')
+      },
+      deep:true,
     }
   }
 };
