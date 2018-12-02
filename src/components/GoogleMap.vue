@@ -1,7 +1,16 @@
+<style>
+     @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
+</style>
 <template>
   <div>
-    <div>
-      <h2 style="color:red;font-family:">Search and add a pin</h2>
+    <div style="margin:auto;text-align:center;">
+      <h2 style="
+      color:black;
+      font-family: 'Sedgwick Ave', cursive;
+      text-align:center;
+      margin-bottom:20+px;
+      ">
+      Search and add a pin</h2>
       <label>
         <gmap-autocomplete
           @place_changed="setPlace">
