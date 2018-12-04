@@ -15,9 +15,9 @@
         <gmap-autocomplete style="width:200px;height:17px"
           @place_changed="setPlace">
         </gmap-autocomplete>
-        <button style="color:green;font-size:16px;cursor:pointer;border-radius:5px;" @click="addMarker">Add</button>
-        <button style="color:red;font-size:16px;cursor:pointer;border-radius:5px;"@click="deleteMarkers">Delete all</button>
-        <button style="color:purple;font-size:16px;cursor:pointer;border-radius:5px;"@click="copyMarkers">Show marker JSON data</button>
+        <button style="color:green;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="addMarker">Add</button>
+        <button style="color:red;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="deleteMarkers">Delete all</button>
+        <button style="color:purple;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="copyMarkers">Show marker JSON data</button>
       </label>
       <br/>
 
