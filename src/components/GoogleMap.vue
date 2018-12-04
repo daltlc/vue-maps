@@ -8,19 +8,25 @@
       color:black;
       font-family: 'Sedgwick Ave', cursive;
       text-align:center;
-      margin-bottom:20+px;      
+      margin-bottom:20px;   
+      margin-top:30px;   
       ">
       Search and add a pin</h2>
       <label>
-        <gmap-autocomplete style="width:200px;height:17px"
+        <gmap-autocomplete style="width:200px;height:28px"
           @place_changed="setPlace">
         </gmap-autocomplete>
-        <button style="color:green;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="addMarker">Add</button>
-        <button style="color:red;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="deleteMarkers">Delete all</button>
-        <button style="color:purple;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="copyMarkers">Show marker JSON data</button>
+        <button v-b-modal.modal1 style="color:green;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="addMarker">Add</button>
+        <button v-b-modal.modal2 style="color:red;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="deleteMarkers">Delete all</button>
+        <button style="color:blue;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="copyMarkers">Show marker JSON data</button>
       </label>
       <br/>
-
+      <b-modal id="modal1" title="Marker">
+        <p class="my-4">Marker added</p>
+      </b-modal>
+      <b-modal id="modal2" title="Marker">
+        <p class="my-4">All markers deleted</p>
+      </b-modal>
     </div>
     <br>
     <gmap-map
@@ -33,6 +39,8 @@
         v-for="(m, index) in markers"
         :position="m.position"
         @click="center=m.position"
+        :clickable="true"
+        :draggable="true"
       ></gmap-marker>
     </gmap-map>
   </div>
