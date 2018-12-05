@@ -1,26 +1,33 @@
 <style>
      @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
+     @import './google-map.scss';
 </style>
 <template>
   <div>
     <div style="margin:auto;text-align:center;">
       <h2 style="
-      color:black;
       font-family: 'Sedgwick Ave', cursive;
       text-align:center;
-      margin-bottom:20+px;      
+      margin-bottom:20px;   
+      margin-top:30px;   
       ">
       Search and add a pin</h2>
       <label>
-        <gmap-autocomplete style="width:200px;height:17px"
+        <gmap-autocomplete style="width:200px;height:32px"
           @place_changed="setPlace">
         </gmap-autocomplete>
-        <button style="color:green;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="addMarker">Add</button>
-        <button style="color:red;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="deleteMarkers">Delete all</button>
-        <button style="color:purple;font-size:16px;cursor:pointer;border-radius:5px;font-family: 'Sedgwick Ave', cursive;" @click="copyMarkers">Show marker JSON data</button>
+        <b-button style="cursor:pointer;" @click="addMarker">Add</b-button>
+        <b-button v-b-modal.modal2 style="cursor:pointer;" @click="deleteMarkers">Delete all</b-button>
+        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Show marker JSON data</b-button>
       </label>
       <br/>
-
+      <b-modal id="modal1" title="Marker">
+        <p class="my-4">Marker added</p>
+        <p>{{markerData}}<p/>
+      </b-modal>
+      <b-modal id="modal2" title="Marker">
+        <p class="my-4">All markers deleted</p>
+      </b-modal>
     </div>
     <br>
     <gmap-map
@@ -33,6 +40,8 @@
         v-for="(m, index) in markers"
         :position="m.position"
         @click="center=m.position"
+        :clickable="true"
+        :draggable="true"
       ></gmap-marker>
     </gmap-map>
   </div>
@@ -50,7 +59,8 @@ export default {
       center: { lat: 45.508, lng: -73.587 },
       markers: [],
       places: [],
-      currentPlace: null
+      currentPlace: null,
+      markerData: JSON.stringify(localStorage.getItem('markers')),
     };
   },
 
@@ -82,11 +92,6 @@ export default {
       this.markers = [];
       console.log('deleted')
 
-    },
-    copyMarkers(){
-     let copy = JSON.stringify(localStorage.getItem('markers'));
-     alert(copy);
-     console.log(copy)
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
