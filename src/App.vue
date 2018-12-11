@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <nav/>
     <google-map />
   </div>
 </template>
