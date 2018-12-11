@@ -56,7 +56,7 @@ export default {
     return {
       // default to Montreal to keep it simple
       // change this to whatever makes sense
-      center: { lat: 45.508, lng: -73.587 },
+      center: { lat: 47.6062095, lng: -122.3320708 },
       markers: [],
       places: [],
       currentPlace: null,
@@ -85,13 +85,15 @@ export default {
         this.places.push(this.currentPlace);
         this.center = marker;
         this.currentPlace = null;
+        // need to update markerData prop here so that the bootstrap modal will update when adding a marker
+        
       }
     },
     deleteMarkers() {
       localStorage.removeItem('markers');
       this.markers = [];
       console.log('deleted')
-
+      this.markerData = [];
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
