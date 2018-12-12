@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <nav/>
-    <google-map />
+    <Nav/>
+    <home />
   </div>
 </template>
 
 <script>
-import GoogleMap from "./components/GoogleMap";
+import Home from "./components/Home";
+import Nav from "./components/Nav";
 
 export default {
   name: "App",
   components: {
-    GoogleMap
+    Nav,
+    Home,
   }
 };
 </script>

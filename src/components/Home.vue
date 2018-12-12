@@ -3,7 +3,7 @@
 
 <template>
   <div id="home">
-    <!-- <google-map /> -->
+    <google-map />
     <div class = "banner">
           <img src="../assets/logo.jpg" alt="">
     </div>
