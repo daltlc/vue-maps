@@ -80,11 +80,12 @@ export default {
           lat: this.currentPlace.geometry.location.lat(),
           lng: this.currentPlace.geometry.location.lng()
         };
-        this.markers.push({ position: marker });
+        this.markers.push({ marker });
         console.log(this.markers)
         this.places.push(this.currentPlace);
         this.center = marker;
         this.currentPlace = null;
+        
         // need to update markerData prop here so that the bootstrap modal will update when adding a marker
         
       }
