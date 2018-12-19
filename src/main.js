@@ -5,6 +5,7 @@ import * as VueGoogleMaps from 'vue2-google-maps';
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import router from './router';
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -13,9 +14,12 @@ Vue.use(VueGoogleMaps, {
   },
 });
 Vue.use(BootstrapVue);
+Vue.config.productionTip = false;
+
 
 new Vue({
   el: '#app',
-  components: { App },
+  router,
   template: '<App/>',
+  components: { App },
 });
