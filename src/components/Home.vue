@@ -9,10 +9,10 @@
     </div>
     <div class = "landing">
       <h1>Start your path</h1>
-      <p>Whereabouts gives the world a community of individuals searching and sharing adventures. Focusing on backpacking and road trips, we give users a simple way to route their trip and share important details along the way. Using our google map API, you're able to pin point each stop you make as well as any special locations you found interesting along your travels. We also encourage travelers to share other knowledge or advice through a series of quetions before submitting your adventure. This gives adventureres like yourself an option to search different adventures to give them a better understanding of what will be needed if they are to do a similar trip.</p>
+      <p>Whereabouts gives the world a community of individuals searching and sharing adventures. Focusing on backpacking and road trips, we give users a simple way to route their trip and share important details along the way. Using the Google Maps API, along with our full-stack app, you're able to pin point each stop you make as well as any special locations you found interesting along your travels. </p>
       <br/>
       <br/>
-      <b-button style="cursor:pointer;" @click="">Get Started</b-button>
+      <b-button style="cursor:pointer;background-color:#34E393;color:black;border-color:#707070;" @click="">Get Started</b-button>
       <!-- <router-link to="/foo">Go to Foo</router-link>
       <router-link to="/bar">Go to Bar</router-link> -->
 
@@ -58,4 +58,11 @@ p{
   text-align: center;
   margin: auto;
 }
+h1{
+  padding-top: 30px;
+}
+body{
+    background-color:rgb(32, 32, 32);
+}
+
 </style>

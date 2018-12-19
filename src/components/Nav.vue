@@ -38,8 +38,18 @@
           },
           {
             id:1,
-            text:'Map',
-            page:'/map'
+            text:'About',
+            page:'/About'
+          },
+          {
+            id:2,
+            text:'Demo',
+            page:'/Demo'
+          },
+          {
+            id:3,
+            text:'Sign Up',
+            page:'/Signup'
           }
         ]
 
@@ -59,8 +69,10 @@
     background-color:rgb(22, 22, 22);
     padding-left:50px;
     text-decoration: none;
+    height: 40px;
   }
   a{
     color:white;
+    padding-top: 5px;
   }
 </style>

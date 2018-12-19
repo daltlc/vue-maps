@@ -18,7 +18,7 @@
         </gmap-autocomplete>
         <b-button style="cursor:pointer;" @click="addMarker">Add</b-button>
         <b-button v-b-modal.modal2 style="cursor:pointer;" @click="deleteMarkers">Delete all</b-button>
-        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Show marker JSON data</b-button>
+        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Share</b-button>
       </label>
       <br/>
       <b-modal id="modal1" title="Marker">

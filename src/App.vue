@@ -13,5 +13,15 @@ export default {
   components: {
     'Nav' : Nav,
   }
+
 };
 </script>
+
+<style scoped lang="scss">
+#app{
+    background-color:rgb(22, 22, 22);
+}
+body{
+    background-color:rgb(22, 22, 22);
+}
+</style>

@@ -1,14 +1,26 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
 <template>
-  <div>
-    <h1>About</h1>
-    <p>Here is some information. This is the about page</p>
+  <div id="about">
+    <h1>hello</h1>
   </div>
 </template>
 
-<script>
+<script lang="js">
+
 export default {
-  name: 'About' //this is the name of the component
-}
+  name: 'About',
+  components: {
+
+
+  }
+};
 </script>
-<style>
+
+<style scoped lang="scss">
+#about{
+    color:black;
+    text-align: center;
+}
 </style>
