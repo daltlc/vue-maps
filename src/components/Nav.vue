@@ -36,21 +36,21 @@
             text:'Home',
             page:'/'
           },
-          {
-            id:1,
-            text:'About',
-            page:'/About'
-          },
+          // {
+          //   id:1,
+          //   text:'About',
+          //   page:'/About'
+          // },
           {
             id:2,
             text:'Demo',
             page:'/Demo'
           },
-          {
-            id:3,
-            text:'Sign Up',
-            page:'/Signup'
-          }
+          // {
+          //   id:3,
+          //   text:'Sign Up',
+          //   page:'/Signup'
+          // }
         ]
 
       }
