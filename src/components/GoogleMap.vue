@@ -51,7 +51,7 @@
 import VueLocalStorage from 'vue-localstorage';
 
 export default {
-  name: "GoogleMap",
+  name: 'GoogleMap',
   data() {
     return {
       // default to Montreal to keep it simple

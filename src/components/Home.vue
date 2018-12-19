@@ -3,7 +3,7 @@
 
 <template>
   <div id="home">
-    <google-map />
+    <!-- <google-map /> -->
     <div class = "banner">
           <img src="../assets/logo.jpg" alt="">
     </div>
@@ -18,15 +18,15 @@
 
     </div>
 
-  <router-view></router-view>
+  <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script lang="js">
-import GoogleMap from "./GoogleMap";
+// import GoogleMap from "./GoogleMap";
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     // GoogleMap 
     //just uncomment this and google maps will load
@@ -42,6 +42,7 @@ export default {
 }
 .banner{
   width:100%;
+  background-color: white;
 }
 img{
   background-color: black;
