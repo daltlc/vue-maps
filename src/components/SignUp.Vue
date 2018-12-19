@@ -23,7 +23,7 @@
                       placeholder="Enter a password">
         </b-form-input>
       </b-form-group>
-      <b-button class ="submit" type="submit" variant="primary">Submit</b-button>
+      <b-button class ="submit" type="submit" variant="">Submit</b-button>
     </b-form>
   </div>
 </template>
@@ -71,7 +71,11 @@ export default {
     color:white;
   }
   .submit{
-    
+    color:white;
+    background-color: #7849E7;
+  }
+  .submit:hover{
+    background-color: rgb(100, 49, 218);
   }
 </style>
 

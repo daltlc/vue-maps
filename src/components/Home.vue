@@ -12,7 +12,14 @@
       <p>Whereabouts gives the world a community of individuals searching and sharing adventures. Focusing on backpacking and road trips, we give users a simple way to route their trip and share important details along the way. Using the Google Maps API, along with our full-stack app, you're able to pin point each stop you make as well as any special locations you found interesting along your travels. </p>
       <br/>
       <br/>
-      <b-button style="cursor:pointer;background-color:#34E393;color:black;border-color:#707070;" @click="">Get Started</b-button>
+      <router-link class = "signup-link" to = "/signup">
+      <b-button class = "link" style="cursor:pointer;background-color:#7849E7;color:white;border-color:black" @click="">Sign Up</b-button>
+       </router-link>
+      <router-link class = "login-link" to = "/login">
+      <b-button class = "link" style="cursor:pointer;background-color:#5F36C6;color:white;border-color:black" @click="">Login</b-button>
+      </router-link>
+      
+
       <!-- <router-link to="/foo">Go to Foo</router-link>
       <router-link to="/bar">Go to Bar</router-link> -->
 
@@ -63,6 +70,9 @@ h1{
 }
 body{
     background-color:rgb(32, 32, 32);
+}
+.link:hover{
+  background-color: rgb(100, 49, 218);
 }
 
 </style>
