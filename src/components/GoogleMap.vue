@@ -109,6 +109,7 @@ export default {
     markers: {
       handler() {
         localStorage.setItem('markers', JSON.stringify(this.markers));
+        
       },
       deep:true,
     }

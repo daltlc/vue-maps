@@ -16,11 +16,6 @@ export default new Router({
       component: Home,
     },  
     {
-      path: '/map',
-      name: 'GoogleMap',
-      component: GoogleMap,
-    },
-    {
       path: '/about',
       name: 'About',
       component: About,
