@@ -80,7 +80,7 @@ export default {
           lat: this.currentPlace.geometry.location.lat(),
           lng: this.currentPlace.geometry.location.lng()
         };
-        this.markers.push({ marker });
+        this.markers.push({ position:marker });
         console.log(this.markers)
         this.places.push(this.currentPlace);
         this.center = marker;
