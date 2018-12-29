@@ -1,6 +1,9 @@
 <style>
      @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
-     @import './google-map.scss';
+     h2{
+       color:white;
+       background-color:black;
+     }
 </style>
 <template>
   <div>
@@ -54,6 +57,7 @@ import VueLocalStorage from 'vue-localstorage';
 export default {
   name: 'GoogleMap',
   data() {
+
     return {
       // default to Montreal to keep it simple
       // change this to whatever makes sense
@@ -98,10 +102,6 @@ export default {
       this.markerData = [];
     },
 
-    addNotes() {
-      console.log(this.notes);
-      alert(this.notes);
-    },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
         this.center = {
