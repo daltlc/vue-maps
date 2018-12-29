@@ -9,7 +9,7 @@
 <script lang="js">
   export default  {
     name: 'add-notes',
-    props: [],
+    props: [notes],
     mounted() {
 
     },

@@ -30,14 +30,11 @@
 </template>
 
 <script lang="js">
-// import GoogleMap from "./GoogleMap";
+
 
 export default {
   name: 'Home',
   components: {
-    // GoogleMap 
-    //just uncomment this and google maps will load
-
   }
 };
 </script>
