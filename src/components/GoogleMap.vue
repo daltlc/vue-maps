@@ -16,6 +16,7 @@
         <gmap-autocomplete style="width:200px;height:32px"
           @place_changed="setPlace">
         </gmap-autocomplete>
+        
         <b-button style="cursor:pointer;" @click="addMarker">Add</b-button>
         <b-button v-b-modal.modal2 style="cursor:pointer;" @click="deleteMarkers">Delete all</b-button>
         <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Share</b-button>
@@ -32,16 +33,16 @@
     <br>
     <gmap-map
       :center="center"
-      :zoom="12"
+      :zoom="3"
       style="width:100%;  height: 400px;  border:2px solid black;"
     >
       <gmap-marker
         :key="index"
         v-for="(m, index) in markers"
         :position="m.position"
-        @click="center=m.position"
+        @click="addNotes"
         :clickable="true"
-        :draggable="true"
+        :draggable="false"
       ></gmap-marker>
     </gmap-map>
   </div>
@@ -60,7 +61,8 @@ export default {
       markers: [],
       places: [],
       currentPlace: null,
-      markerData: JSON.stringify(localStorage.getItem('markers')),
+      markerData: localStorage.getItem('markers'),
+      notes: [],
     };
   },
 
@@ -85,7 +87,6 @@ export default {
         this.places.push(this.currentPlace);
         this.center = marker;
         this.currentPlace = null;
-        
         // need to update markerData prop here so that the bootstrap modal will update when adding a marker
         
       }
@@ -95,6 +96,11 @@ export default {
       this.markers = [];
       console.log('deleted')
       this.markerData = [];
+    },
+
+    addNotes() {
+      console.log(this.notes);
+      alert(this.notes);
     },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {

@@ -9,7 +9,7 @@
     </div>
     <div class = "landing">
       <h1>Start your path</h1>
-      <p>Whereabouts gives the world a community of individuals searching and sharing adventures. Focusing on backpacking and road trips, we give users a simple way to route their trip and share important details along the way. Using the Google Maps API, along with our full-stack app, you're able to pin point each stop you make as well as any special locations you found interesting along your travels. </p>
+      <p>Rethink basic outcome of app </p>
       <br/>
       <br/>
       <router-link class = "signup-link" to = "/signup">
