@@ -53,6 +53,7 @@
 
 <script>
 import VueLocalStorage from 'vue-localstorage';
+import AddNotes from 'add-notes';
 
 export default {
   name: 'GoogleMap',
@@ -100,6 +101,7 @@ export default {
       this.markerData = [];
     },
     addNotes() {
+      
     },
 
 
