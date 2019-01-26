@@ -22,11 +22,11 @@
         
         <b-button style="cursor:pointer;" @click="addMarker">Add</b-button>
         <b-button v-b-modal.modal2 style="cursor:pointer;" @click="deleteMarkers">Delete all</b-button>
-        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="addNotes">Share</b-button>
+        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Share</b-button>
       </label>
       <br/>
       <b-modal id="modal1" title="Marker">
-        <p class="my-4">Marker added</p>
+        <p class="my-4" style="color:black;">Marker added</p>
         <p style="color:black;">{{markerData}}<p/>
       </b-modal>
       <b-modal id="modal2" title="Marker">
@@ -101,7 +101,7 @@ export default {
       this.markerData = [];
     },
     addNotes() {
-      
+      console.log(this.marker.markerData);
     },
 
 

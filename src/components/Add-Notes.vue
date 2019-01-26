@@ -29,6 +29,5 @@
 
 <style scoped lang="scss">
   .add-notes {
-    color:black;
   }
 </style>

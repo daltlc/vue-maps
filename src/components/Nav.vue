@@ -41,11 +41,11 @@
           //   text:'About',
           //   page:'/About'
           // },
-          {
-            id:2,
-            text:'Demo',
-            page:'/Demo'
-          },
+          // {
+          //   id:2,
+          //   text:'Demo',
+          //   page:'/Demo'
+          // },
           // {
           //   id:3,
           //   text:'Sign Up',
