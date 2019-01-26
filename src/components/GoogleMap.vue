@@ -53,7 +53,7 @@
 
 <script>
 import VueLocalStorage from 'vue-localstorage';
-import AddNotes from 'add-notes';
+// import AddNotes from 'add-notes';
 
 
 export default {
