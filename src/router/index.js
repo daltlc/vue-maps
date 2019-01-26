@@ -12,17 +12,12 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home,
+      component: Home,GoogleMap,
     },  
     {
       path: '/about',
       name: 'About',
       component: About,
-    },
-    {
-      path: '/demo',
-      name: 'GoogleMap',
-      component: GoogleMap,
     },
     {
       path: '/signup',

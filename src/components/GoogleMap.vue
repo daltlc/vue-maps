@@ -26,8 +26,8 @@
       </label>
       <br/>
       <b-modal id="modal1" title="Marker">
-        <p class="my-4">Marker added</p>
-        <p>{{markerData}}<p/>
+        <p class="my-4" style="color:black;">Marker added</p>
+        <p style="color:black;">{{markerData}}<p/>
       </b-modal>
       <b-modal id="modal2" title="Marker">
         <p class="my-4">All markers deleted</p>
@@ -54,6 +54,7 @@
 <script>
 import VueLocalStorage from 'vue-localstorage';
 import AddNotes from 'add-notes';
+
 
 export default {
   name: 'GoogleMap',
@@ -101,7 +102,7 @@ export default {
       this.markerData = [];
     },
     addNotes() {
-      
+      console.log(this.marker.markerData);
     },
 
 
