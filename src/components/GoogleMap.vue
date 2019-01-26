@@ -53,7 +53,6 @@
 
 <script>
 import VueLocalStorage from 'vue-localstorage';
-import AddNotes from 'add-notes';
 
 export default {
   name: 'GoogleMap',
@@ -100,11 +99,6 @@ export default {
       console.log('deleted')
       this.markerData = [];
     },
-    addNotes() {
-      
-    },
-
-
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
         this.center = {
