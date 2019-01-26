@@ -22,12 +22,12 @@
         
         <b-button style="cursor:pointer;" @click="addMarker">Add</b-button>
         <b-button v-b-modal.modal2 style="cursor:pointer;" @click="deleteMarkers">Delete all</b-button>
-        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Share</b-button>
+        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="addNotes">Share</b-button>
       </label>
       <br/>
       <b-modal id="modal1" title="Marker">
         <p class="my-4">Marker added</p>
-        <p>{{markerData}}<p/>
+        <p style="color:black;">{{markerData}}<p/>
       </b-modal>
       <b-modal id="modal2" title="Marker">
         <p class="my-4">All markers deleted</p>
@@ -53,14 +53,13 @@
 
 <script>
 import VueLocalStorage from 'vue-localstorage';
+// import AddNotes from 'add-notes';
 
 export default {
   name: 'GoogleMap',
   data() {
 
     return {
-      // default to Montreal to keep it simple
-      // change this to whatever makes sense
       center: { lat: 47.6062095, lng: -122.3320708 },
       markers: [],
       places: [],
@@ -101,6 +100,10 @@ export default {
       console.log('deleted')
       this.markerData = [];
     },
+    addNotes() {
+      
+    },
+
 
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {

@@ -3,21 +3,20 @@
 
 <template>
   <div id="home">
-    <!-- <google-map /> -->
     <div class = "banner">
-          <img src="../assets/logo.jpg" alt="">
     </div>
     <div class = "landing">
-      <h1>Start your path</h1>
-      <p>Rethink basic outcome of app </p>
+      <google-map />
+      <!-- <h1>Start your path</h1>
+      <p>Rethink basic outcome of app </p> -->
       <br/>
       <br/>
-      <router-link class = "signup-link" to = "/signup">
+      <!-- <router-link class = "signup-link" to = "/signup">
       <b-button class = "link" style="cursor:pointer;background-color:#7849E7;color:white;border-color:black" @click="">Sign Up</b-button>
        </router-link>
       <router-link class = "login-link" to = "/login">
       <b-button class = "link" style="cursor:pointer;background-color:#5F36C6;color:white;border-color:black" @click="">Login</b-button>
-      </router-link>
+      </router-link> -->
       
 
       <!-- <router-link to="/foo">Go to Foo</router-link>
@@ -30,12 +29,12 @@
 </template>
 
 <script lang="js">
-// import GoogleMap from "./GoogleMap";
+import GoogleMap from "./GoogleMap";
 
 export default {
   name: 'Home',
   components: {
-    // GoogleMap 
+    GoogleMap
     //just uncomment this and google maps will load
 
   }
