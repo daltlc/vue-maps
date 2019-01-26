@@ -29,14 +29,21 @@
 </template>
 
 <script lang="js">
+<<<<<<< HEAD
 import GoogleMap from "./GoogleMap";
+=======
+
+>>>>>>> ed695eddd649a6d2d5831f96b171cfcf7e1f1e60
 
 export default {
   name: 'Home',
   components: {
+<<<<<<< HEAD
     GoogleMap
     //just uncomment this and google maps will load
 
+=======
+>>>>>>> ed695eddd649a6d2d5831f96b171cfcf7e1f1e60
   }
 };
 </script>

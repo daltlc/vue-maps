@@ -22,7 +22,7 @@
         
         <b-button style="cursor:pointer;" @click="addMarker">Add</b-button>
         <b-button v-b-modal.modal2 style="cursor:pointer;" @click="deleteMarkers">Delete all</b-button>
-        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="">Share</b-button>
+        <b-button v-b-modal.modal1 style="cursor:pointer;" @click="addNotes">Share</b-button>
       </label>
       <br/>
       <b-modal id="modal1" title="Marker">
@@ -53,7 +53,8 @@
 
 <script>
 import VueLocalStorage from 'vue-localstorage';
-// import AddNotes from 'add-notes';
+import AddNotes from 'add-notes';
+
 
 export default {
   name: 'GoogleMap',
