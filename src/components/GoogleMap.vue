@@ -1,15 +1,14 @@
 <style>
      @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
      h2{
-       color:white;
-       background-color:black;
+       color:black;
+       background-color:white;
      }
 </style>
 <template>
   <div>
     <div style="margin:auto;text-align:center;">
       <h2 style="
-      font-family: 'Sedgwick Ave', cursive;
       text-align:center;
       margin-bottom:20px;   
       margin-top:30px;   
@@ -74,7 +73,6 @@ export default {
     this.geolocate();
     console.log('App mounted!');
     if (localStorage.getItem('markers')) this.markers = JSON.parse(localStorage.getItem('markers'));
-    console.log({markerData})
   },
   methods: {
     // receives a place object via the autocomplete component

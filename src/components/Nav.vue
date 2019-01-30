@@ -66,7 +66,7 @@
 
 <style scoped lang="scss">
   .nav {
-    background-color:rgb(22, 22, 22);
+    background-color:white;
     padding-left:50px;
     text-decoration: none;
     height: 40px;

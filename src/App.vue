@@ -19,9 +19,9 @@ export default {
 
 <style scoped lang="scss">
 #app{
-    background-color:rgb(22, 22, 22);
+    background-color:white;
 }
 body{
-    background-color:rgb(22, 22, 22);
+    background-color:white;
 }
 </style>

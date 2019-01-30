@@ -49,13 +49,13 @@ export default {
 .banner{
   width:100%;
   background-color: white;
+
 }
 img{
-  background-color: black;
   width: 40%;
 }
 .landing {
-  background-color:rgb(32, 32, 32);
+  background-color:white;
   color:white;
   padding-bottom: 30px;
 }
@@ -68,7 +68,7 @@ h1{
   padding-top: 30px;
 }
 body{
-    background-color:rgb(32, 32, 32);
+    background-color:white;
 }
 .link:hover{
   background-color: rgb(100, 49, 218);
