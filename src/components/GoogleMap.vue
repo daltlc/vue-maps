@@ -26,7 +26,7 @@
       </label>
       <br/>
       <b-modal id="modal1" title="Marker">
-        <p class="my-4" style="color:black;">Marker added</p>
+        <p class="my-4" style="color:black;">Markers</p>
         <p style="color:black;">{{markerData}}<p/>
       </b-modal>
       <b-modal id="modal2" title="Marker">
@@ -74,6 +74,7 @@ export default {
     this.geolocate();
     console.log('App mounted!');
     if (localStorage.getItem('markers')) this.markers = JSON.parse(localStorage.getItem('markers'));
+    console.log({markerData})
   },
   methods: {
     // receives a place object via the autocomplete component
